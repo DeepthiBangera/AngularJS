@@ -1,0 +1,30 @@
+<div>
+</div>
+<div class="col-md-7" style="margin-top:30px">
+    <table class="table table-responsive table-hover">
+        <thead style="background-color: darkseagreen;">
+            <tr class="">
+                <td style="width: 10%;">
+                    <strong>Id</strong>
+                </td>
+                <td style="width: 30%;"><strong>Name</strong></td>
+                <td style="width: 60%;"><strong>Markup Name using custom Directive</strong></td>
+            </tr>
+        </thead>
+        <tbody style="background-color: honeydew;">
+            <tr ng-repeat="team in teams">
+                <td>
+                    <a href="#players/{{team.teamId}}">{{team.teamId}}</a>
+                </td>
+                <td>
+                    <a href="#players/{{team.teamId}}">{{team.teamName}}</a>
+                </td>
+                <td>
+                    <teamtag name="{{team.teamName}}" id="{{team.teamId}}"></teamtag>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <div></div>
+</div>

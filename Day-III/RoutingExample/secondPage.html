@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+</head>
+<body data-ng-app="sampleApp">
+  <div >
+  
+  <button data-ng-click="predicate=''">Set to unsorted</button>
+  <table border="1px">
+    <tr>
+     <th>
+         <button data-ng-click="order('EMPNO')">Emp Number</button>
+     </th>
+     <th>
+         <button data-ng-click="order('ENAME')">Emp Name</button>
+     </th>
+     <th>
+         <button data-ng-click="order('JOB')">Employee Job</button>
+     </th>
+     <th>
+         <button data-ng-click="order('DEPTNO')">Department</button>
+     </th>
+    </tr>
+    <tr data-ng-repeat="friend in friends | orderBy:predicate:reverse">
+      <td>{{friend.EMPNO}}</td>
+      <td>{{friend.ENAME}}</td>
+      <td>{{friend.JOB}}</td>
+      <td>{{friend.DEPTNO}}</td>
+    </tr>
+  </table>
+  
+</div>
+</body>
+</html>

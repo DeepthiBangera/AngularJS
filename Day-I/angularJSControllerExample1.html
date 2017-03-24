@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script>
+	var myApp=angular.module("myApp",[]);
+	
+	myApp.controller('myEmpController', function($scope) {
+	      $scope.employeeObject = {
+	         empNumber: 13431,
+	         empFirstName: "Srinivasa Reddy",
+	         empLastName: "Challa",
+	         empJob: "Systems Analyst",
+	         empSalary: 9000,
+	         empDeptNo: 10 ,
+	        
+	         calculateSalary: function() {
+	            var totalSalary;
+	            totalSalary=this.empSalary;
+	            totalSalary=totalSalary+(0.3*totalSalary);
+	            return totalSalary;
+	         },
+	      
+	      	fullName: function() {
+	           //return $scope.employeeObject.empFirstName +" " + $scope.employeeObject.empLastName;
+	           return this.empFirstName +" " + this.empLastName;
+	         }	       
+	     	
+	      };
+	});
+</script>
+</head>
+<body ng-app="myApp" ng-controller ="myEmpController">
+<form name="form">
+<table border="1" align="center">
+<tr><td> Employee Number</td>
+	<td> <input  type="number" name="empNumber" ng-model="employeeObject.empNumber" required="required"/></td>
+</tr>
+<tr><td> Employee First Name</td>
+	<td> <input  type="text" name="empFirstName" ng-model="employeeObject.empFirstName" required="required"/></td>
+</tr>	
+<tr><td> Employee Last Name</td>
+	<td> <input  type="text" name="empLastName" ng-model="employeeObject.empLastName" required="required"/></td>
+</tr>	
+<tr><td> Employee Job</td>
+	<td> <input  type="text" name="empJob" ng-model="employeeObject.empJob" required="required"/></td>
+</tr>	
+<tr><td> Employee Salary</td>
+	<td> <input  type="number" name="empSalary" ng-model="employeeObject.empSalary" required="required"/></td>
+</tr>	
+<tr><td> Employee Department Number</td>
+	<td> <input  type="number" name="empDeptNo" ng-model="employeeObject.empDeptNo" required="required"/></td>
+</tr>
+</table>
+</form>
+<section>
+<h3>Updated Data From Controller</h3>
+	<div>
+			Employee Number: 	<span ng-bind="employeeObject.empNumber">		</span>   	<br>
+			Employee Name: 		<span ng-bind="employeeObject.fullName()">		</span>  	<br>
+			Employee Job: 		<span ng-bind="employeeObject.empJob">			</span>  	<br>
+			Employee Salary: 	<span ng-bind="employeeObject.empSalary">		</span>  	<br>
+			Employee Department Number: <span ng-bind="employeeObject.empDeptNo"></span>  	<br>
+			Employee Take Home Salary : <span ng-bind="employeeObject.calculateSalary() | currency" ></span> <br>
+			</div>
+</section>
+</body>
+</html>

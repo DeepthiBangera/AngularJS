@@ -1,0 +1,131 @@
+[ {"teamId" : 1, "playersList" : [
+		{
+		"playerId" : 1,
+		"FirstName":"Simon",
+		"LastName":"Kibura",
+		"Image":"player.jpg"
+	},
+{
+		"playerId" : 2,
+		"FirstName":"Jang Kun",
+		"LastName":"Lee",
+		"Image":"player.jpg"
+	},
+{
+		"playerId" : 3,
+		"FirstName":"Amit Singh",
+		"LastName":"Chillar",
+		"Image":"player.jpg"
+	},
+{
+		"playerId" : 4,
+		"FirstName":"Nitin",
+		"LastName":"Madane",
+		"Image":"player.jpg"
+	}
+]},
+{"teamId" : 2, "playersList" : [
+		{
+		"playerId" : 1,
+		"FirstName":"Sanjay",
+		"LastName":"Shrestha",
+		"Image":"player2.jpg"
+	},
+{
+		"playerId" : 2,
+		"FirstName":"Jang Kun",
+		"LastName":"Lee",
+		"Image":"player2.jpg"
+	},
+{
+		"playerId" : 3,
+		"FirstName":"Amit Singh",
+		"LastName":"Chillar",
+		"Image":"player2.jpg"
+	},
+{
+		"playerId" : 4,
+		"FirstName":"Nitin",
+		"LastName":"Madane",
+		"Image":"player2.jpg"
+	}
+]},
+{"teamId" : 3, "playersList" : [
+		{
+		"playerId" : 1,
+		"FirstName":"Dharmaraj",
+		"LastName":"Cheralathan",
+		"Image":"player3.jpg"
+	},
+{
+		"playerId" : 2,
+		"FirstName":"Jang Kun",
+		"LastName":"Lee",
+		"Image":"player3.jpg"
+	},
+{
+		"playerId" : 3,
+		"FirstName":"Amit Singh",
+		"LastName":"Chillar",
+		"Image":"player3.jpg"
+	},
+{
+		"playerId" : 4,
+		"FirstName":"Nitin",
+		"LastName":"Madane",
+		"Image":"player3.jpg"
+	}
+]},
+{"teamId" : 4, "playersList" : [
+		{
+		"playerId" : 1,
+		"FirstName":"Rupesh",
+		"LastName":"Tomar",
+		"Image":"player4.jpg"
+	},
+{
+		"playerId" : 2,
+		"FirstName":"Jang Kun",
+		"LastName":"Lee",
+		"Image":"player4.jpg"
+	},
+{
+		"playerId" : 3,
+		"FirstName":"Amit Singh",
+		"LastName":"Chillar",
+		"Image":"player4.jpg"
+	},
+{
+		"playerId" : 4,
+		"FirstName":"Nitin",
+		"LastName":"Madane",
+		"Image":"player4.jpg"
+	}
+]},
+{"teamId" : 5, "playersList" : [
+		{
+		"playerId" : 1,
+		"FirstName":"Thirumala",
+		"LastName":"T",
+		"Image":"player5.jpg"
+	},
+{
+		"playerId" : 2,
+		"FirstName":"John",
+		"LastName":"Lee",
+		"Image":"player5.jpg"
+	},
+{
+		"playerId" : 3,
+		"FirstName":"Amit",
+		"LastName":"Kumar",
+		"Image":"player5.jpg"
+	},
+{
+		"playerId" : 4,
+		"FirstName":"Ragav",
+		"LastName":"Lawrence",
+		"Image":"player5.jpg"
+	}
+]}
+]

@@ -1,0 +1,15 @@
+<html ng-app>
+  <head>
+    <title>Simple data-ng-rept example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+  <body ng-init = "names=['RR','SS','DD','GG']">
+    Name:
+	 <br/>
+	 <input type = "text" data-ng-model="name"/>{{ name }}
+	 <br/>
+	  <ul>
+	    <li ng-repeat="personName in names">{{ personName}}</li>
+	  </ul>
+   </body>
+</html>

@@ -1,0 +1,47 @@
+[
+		{"empNumber":7369,
+		"empName":"SMITH",
+		"empJob":"CLERK",
+		"empBossCode":7902,
+		"empDoj":"Dec 30, 1980",
+		"empSalary":800.0,
+		"empComm":0.0,
+		"empDeptNumber":20
+	},  
+	{	"empNumber":7566,
+		"empName":"JONES",
+		"empJob":"MANAGER",
+		"empBossCode":7839,
+		"empDoj":"Mar 2, 1981",
+		"empSalary":2975.0,
+		"empComm":0.0,
+		"empDeptNumber":20
+	}, 
+	{	"empNumber":7788,
+		"empName":"SCOTT",
+		"empJob":"ANALYST",
+		"empBossCode":7566,
+		"empDoj":"Dec 12, 1982",
+		"empSalary":3000.0,
+		"empComm":0.0,
+		"empDeptNumber":20
+	}, 
+	{	"empNumber":7876,
+		"empName":"ADAMS",
+		"empJob":"CLERK",
+		"empBossCode":7788,
+		"empDoj":"Jan 3, 1983",
+		"empSalary":1100.0,
+		"empComm":0.0,
+		"empDeptNumber":20
+	}, 
+	{	"empNumber":7902,
+		"empName":"FORD",
+		"empJob":"ANALYST",
+		"empBossCode":7566,
+		"empDoj":"Dec 3, 1981",
+		"empSalary":3000.0,
+		"empComm":0.0,
+		"empDeptNumber":20
+	}
+]

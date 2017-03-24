@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+
+<body ng-app ng-init="Fruit = 'Apple'; Fruitcolor = 'Red';">
+  Fruit Name: {{Fruit}}<br />
+  Fruitcolor: <span ng-bind="Fruitcolor"></span><br />
+  <br />
+  <label>Set the Fruit Name: <input type="text" ng-model="Fruit"/></label><br />
+  <label>Set the Fruitcolor: <input type="text" ng-model="Fruitcolor"/></label>
+</body>
+</html>
+
+<!-- this is two way databing example with ng-model directive   
+  We use the ng-model directive to bind a model variable to the 
+  HTML element that can not only display its value, but also change it.-->

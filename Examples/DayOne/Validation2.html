@@ -1,0 +1,24 @@
+<html ng-app="myApp">
+<head>
+<script src ="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+</head>
+<body ng-controller="myController">
+<form name ="login" novalidate>
+<div>
+  <label for = "email">Email</label>
+  <input type ="email" name = "email" ng-model="email"/>
+  <span ng-show ="login.$error.required">please enter email.</span>
+  <span ng-show ="login.$error.email && submitted">Email is invalid.</span>
+</div>
+<div>
+ <label for ="password">Password</label>
+  <input type="password" name="password" ng-model="password"/>
+  <span ng-show ="login.password.$error.required">Please enter password.</span>
+  
+</div>
+<button type = "submit" ng-click="submitLogin(login)">Login</button>
+<script src = "core.js"></script>
+</form>
+</body>
+</html>

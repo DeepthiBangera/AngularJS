@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>AJAX with AngularJS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script type="text/javascript">
+
+	var myApp=angular.module('myApp', []);
+	myApp.controller('MyController', function($scope,$http){
+     
+     $http({
+			method : 'POST',
+			url : 'employeeRecords.txt',
+			/* params: {deptId: $scope.deptId}, */
+		}).success(function(data, status, headers, config) {
+			alert(status);
+			$scope.empList=data;	
+		}).error(function(data, status, headers, config) {
+			alert(status);
+			// called asynchronously if an error occurs
+			// or server returns response with an error status.	
+		});
+      });
+</script>
+</head>
+<body>
+	<div data-ng-app="myApp">
+		<div data-ng-controller="MyController">
+			<table border="1">
+				<tr>
+					<th>Number</th>
+					<th>Name</th>
+					<th>Job</th>
+					<th>Boss Code</th>
+					<th>DOJ</th>
+					<th>Basic</th>
+					<th>Commission</th>
+					<th>Department Number</th>
+				</tr>
+				<tr data-ng-repeat="employeeVO in empList | orderBy:'empSalary' " >
+					<td>{{employeeVO.empNumber}}</td>
+					<td>{{employeeVO.empName}}</td>
+					<td>{{employeeVO.empJob}}</td>
+					<td>{{employeeVO.empBossCode}}</td>
+					<td>{{employeeVO.empDoj | date}}</td>
+					<td>{{employeeVO.empSalary}}</td>
+					<td>{{employeeVO.empComm}}</td>
+					<td>{{employeeVO.empDeptNumber}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
+

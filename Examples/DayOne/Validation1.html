@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+<form name="form" novalidate>
+
+    <input placeholder="User Name"
+           name="name" ng-model="theName" ng-model-options="{updateOn:'blur'}"
+           required pattern=".{2,}" />
+    <div class="error-message"
+         ng-show="form.name.$invalid && !form.name.$pristine">
+        We need a name with 2 chars or more.
+    </div>
+
+    <input placeholder="E-mail"
+           name="email" ng-model="theEmail" ng-model-options="{updateOn:'blur'}"
+           required type="email" />
+    <div class="error-message"
+         ng-show="form.email.$invalid && !form.email.$pristine">
+        We need a valid e-mail address.
+    </div>
+
+    <input placeholder="Password"
+           name="pwd" ng-model="thePwd" ng-model-options="{ updateOn: 'blur' }"
+           required type="password" pattern=".{2,}" />
+    <div class="error-message"
+         ng-show="form.password.$invalid && !form.password.$pristine">
+        Passwords must have at least 2 chars.
+    </div>
+
+    <input placeholder="Check Password"
+           name="check" ng-model="chkPwd"
+           type="password" wj-valid="chkPwd == thePwd" />
+    <div class="error-message"
+         ng-show="form.check.$invalid && !form.check.$pristine">
+        Sorry, the passwords don't match.
+    </div>
+    <button type="submit"
+            ng-disabled="form.$invalid">
+        Log In
+    </button>
+</form>
+</body>
+</html>

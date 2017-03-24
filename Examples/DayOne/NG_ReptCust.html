@@ -1,0 +1,15 @@
+<html ng-app>
+  <head>
+    <title>Simple data-ng-rept example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+  <body data-ng-init = "customers=[{name:'Shailaja', city:'Bangalore'},{name:'Roopa', city:'Bangalore'}]">
+    Name:
+	 <br/>
+	 <input type = "text" data-ng-model="name"/>{{ name }}
+	 <br/>
+	  <ul>
+	    <li data-ng-repeat="cust in customers  ">{{ cust.name}} - {{cust.city}}</li>
+	  </ul>
+   </body>
+</html>

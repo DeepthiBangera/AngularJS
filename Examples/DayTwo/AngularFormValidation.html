@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+<form name="userForm">
+
+    <input 
+        type="text" 
+        name="username" 
+        ng-model="user.username" 
+        ng-minlength="3" 
+        ng-maxlength="8"
+        required>
+
+    <!-- show an error if username is too short -->
+    <p ng-show="userForm.username.$error.minlength">Username is too short.</p>
+
+    <!-- show an error if username is too long -->
+    <p ng-show="userForm.username.$error.maxlength">Username is too long.</p>
+
+    <!-- show an error if this isn't filled in -->
+    <p ng-show="userForm.username.$error.required">Your username is required.</p>
+
+</form>
+</body>
+</html>

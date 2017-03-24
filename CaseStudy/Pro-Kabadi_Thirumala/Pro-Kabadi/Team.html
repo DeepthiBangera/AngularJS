@@ -1,0 +1,31 @@
+<div>
+    <div class="col-md-7" style="margin-top:30px;float:right;">
+        <input class="form-control" ng-model="nameFilter" style="width: 165px;" placeholder="Search by team name" type="text" />
+    </div>
+</div>
+<div class="col-md-7" style="margin-top:30px">
+    <table class="table table-responsive table-hover">
+        <thead style="background-color: darkseagreen;">
+            <tr class="">
+                <td style="width: 15%;">
+                    <strong>Id</strong>
+                </td>
+                <td style="width: 50%;"><strong>Logo</strong></td>
+                <td><strong>Name</strong></td>
+            </tr>
+        </thead>
+        <tbody style="background-color: honeydew;">
+            <tr ng-repeat="team in teams | filter: nameFilter">
+                <td>
+                    <a href="#players/{{team.teamId}}">{{team.teamId}}</a>
+                </td>
+                <td><a href="#players/{{team.teamId}}"><img ng-src="images/{{team.teamLogo}}" /></a></td>
+                <td>
+                    <a href="#players/{{team.teamId}}">{{team.teamName}}</a>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <div></div>
+</div>

@@ -1,0 +1,35 @@
+<html ng-app>
+  <head>
+    <title>Simple data-ng-rept example</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script>
+	  function SimpleController($scope){
+	    $scope.customers =[{name: 'John Smith',city:'phoenix'},
+		                  {name:'Jamie Riley',city:'Atlanta'}
+						  ];  
+     	 					 
+
+        						 
+		 }              
+	</script>
+  </head>
+  <body>
+   <div data-ng-controller ="SimpleController">
+    Name:
+	 <br/>
+	 <input type = "text" data-ng-model="name"/>
+	 
+	 <br/>
+	  <ul>
+	    <li data-ng-repeat="cust in customers ">{{ cust.name | uppercase}} - {{ cust.city | lowercase}}</li>
+		
+	  </ul>	 
+     </div>	  
+	
+   </body>
+</html>
+
+
+
+
+

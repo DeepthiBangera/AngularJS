@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
+<style>
+caption{
+background-color:green;
+color:white;
+}
+</style> 
+<script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+	$scope.empID = 7346;
+	$scope.empName = 'John Doe';
+    $scope.email = 'john.doe@gmail.com';
+	$scope.options = ["President", "Manager", "Clerk","Salesman"];
+});
+</script>
+</head>
+<body>
+
+<h2>Validation Example</h2>
+<form data-ng-app="myApp" data-ng-controller="validateCtrl" name="myForm" novalidate>
+	<table>
+	<caption>Form Validation</caption>
+		<tr>
+			<td>Employee ID:</td>
+			<td>
+				<input type="number" name="empID" data-ng-model="empID" data-ng-pattern="/^[0-9]{4}$/" required>
+				<span style="color:red" data-ng-show="myForm.empID.$dirty && myForm.empID.$invalid">
+				<span data-ng-show="myForm.empID.$error.required">Employee ID is required.</span>
+				<span data-ng-show="myForm.empID.$error.pattern">Invalid Employee ID.</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>Employee Name:</td>
+			<td>
+				<input type="text" name="empName" data-ng-model="empName" required>
+				<span style="color:red" data-ng-show="myForm.empName.$dirty && myForm.empName.$invalid">
+				<span data-ng-show="myForm.empName.$error.required">Employee Name is required.</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>Email ID:</td>
+			<td>
+				<input type="email" name="email" data-ng-model="email" required>
+				<span style="color:red" data-ng-show="myForm.email.$dirty && myForm.email.$invalid">
+				<span data-ng-show="myForm.email.$error.required">Email is required.</span>
+				<span data-ng-show="myForm.email.$error.email">Invalid email address.</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>DOJ:</td>
+			<td>
+				<input type="date" name="doj" data-ng-model="doj" required>
+				<span style="color:red" data-ng-show="myForm.doj.$dirty && myForm.doj.$invalid">
+				<span data-ng-show="myForm.doj.$error.required">DOJ is required.</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>JOB:</td>
+			<td>
+				<select data-ng-model="job" name="job" data-ng-options="job for job in options">
+				</select>
+				<span style="color:red" data-ng-show="myForm.job.$untouched">
+				<span data-ng-show="myForm.job.$pristine">Select a JOB.</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+		  <td colspan="2"><input type="submit"></td>
+		</tr>
+
+	</table>
+
+</form>
+
+
+
+</body>
+</html>

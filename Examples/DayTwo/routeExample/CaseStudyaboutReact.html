@@ -1,0 +1,120 @@
+usecase of reactJs
+1. list the bugs
+2. Add a new bugs
+3. Toggle the closed status of the bugs
+4. Remove closed bugs
+5. Display stats(closed bugs/open bugs)
+
+there will be 3 view needs to be created
+1) box
+2) statics
+3) bugstates
+
+with respect to that we need to create a modle objects which will not retain the status 
+Emmet-> langue for HTMLdecoding
+the babel translator link
+http://babeljs.io/repl/#?experimental=false&evaluate=true&loose=false&spec=false&code=let%20numbers%20%3D%20%5B10%2C11%2C12%2C13%2C14%5D%3B%0Alet%20evenNumbers%20%3D%20numbers.filter(n%3D%3E%20n%252%3D%3D0)%3B%0A%0Afunction%20print(...nos)%7B%0A%20%20nos.forEach(n%20%3D%3E%20console.log(n))%3B%0A%7D%0A
+
+html into 3 componet render and bring the component
+
+the github where examples are stored
+https://github.com/tkmagesh/Sonata-React-Feb-2016/blob/master/Day-02/03-BugTracker/index.html
+
+command used to install an http sever written in javascript to execute reactJs :npm install http-server -g
+search for nodeJS command promt and type : go to the specific folder where u r working and the give the following command : http-server -c -1 to start server
+the give this url to http://local:8080
+
+for the proxy settings the following npm is used :
+
+npm config set proxy http://172.26.42.65:8080
+npm config set http-proxy http://172.26.42.65:8080
+npm config set https-proxy http://172.26.42.65:8080
+
+The redux has 5 functionality 
+1) provider
+2) store
+3) action
+4) reducer
+5) dispatcher
+
+this example to find the state of an object :
+
+var numbers = [10,25,56,23,12] find the max of these numbers without using for loop.
+
+numbers.reduce(function(v1,v2){
+  return v1>v2 ? v1:v2;
+})
+
+numbers.reduce(function(v1,v2){
+  return v1<v2 ? v1:v2;
+})
+
+numbers.reduce(function(v1,v2){
+  return v + v2;
+})
+
+the reduce is a method in array which is used to iterat the array without using for loop
+
+
+the redux details about the promise :
+
+function addAsync(x,y){
+  console.log('processing',x,'and',y);
+  setTimeout(function(){
+  var result= x+y;
+  console.log('[provider] returning result');
+  },4000);
+  return promise;
+}
+
+//with the promise object
+
+function addAsync(x,y){
+  console.log('[Provider] processing',x,'and',y);
+  var promise = new Promise(function(resolve,reject){
+    setTimeout(function(){
+  var result= x+y;
+  console.log('[provider] returning result');
+   resolve(result);
+  },4000);
+  });
+  
+  return promise;
+}
+
+//when the promise was asked the consumer is resloved
+varp = addAsunc(100,200);
+p.then(function(result){
+  console.log('[Consumer] result=' result);
+});
+
+//wait for the complete the and call the consumer
+var p = addAsync(100,200);
+//after the completeing also it will gives the result irrespective of when u subsribe we will get the result bcz promise will hold the value
+//every then will result a new promise object(Async call)
+p.then(function(result){
+  console.log('[Consumer] result=' result);
+});
+
+//either we can return a result or promise. if returns a result then will create an promise object and returns. so the advantage is
+//we can change the value when we require.
+var p2 = p.then(function(result){
+  console.log('[Consumer] result=' result);
+  return result * 2; 
+});
+
+//the ajax call which will retrun the promise object is fetch
+
+fetch("https://www.reddit.com/r/india.json");
+.then(function(response){
+  window.fetchResponse= response;
+  console.log("done");
+});
+
+console.log(response)
+
+console.log(fetchResponse)
+var o = fetchResponse
+
+
+

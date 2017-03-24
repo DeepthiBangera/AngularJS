@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html data-ng-app="HelloAppModule">
+<head>
+<title></title>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script type="text/javascript" src="JS/CustomFilterModule.js"></script>
+  <script type="text/javascript" src="JS/HelloAppModule.js" ></script>
+  
+</head>
+<body data-ng-controller="HelloCtrl">
+  <form>
+      <input type="text" data-ng-model="myName"/>
+  </form>
+  <div>User Name: {{myName|initCap}}</div>
+ 
+ <input type="text" data-ng-model="myName" placeholder="Enter text"/>
+        <p>Filtered Reverse Input: {{ myName | reverseText }}</p>
+        
+<div  data-ng-controller="NumberController">
+               <h4 >AngularJS Filter - Ordinal Numbers</h4>
+               <p><strong>Original:</strong></p>
+               <ul >
+                 <li>{{example1}}</li>
+                 <li>{{example2}}</li>
+                 <li>{{example3}}</li>
+                 <li>{{example4}}</li>
+                 <li>{{example5}}</li>
+                 <li>{{example6}}</li>
+                 <li>{{example7}}</li>
+                 <li>{{example8}}</li>
+               </ul>
+               <p><strong>Ordinal Filter:</strong></p>
+               <ul >
+                 <li>{{example1 | ordinal}}</li>
+                 <li>{{example2 | ordinal}}</li>
+                 <li>{{example3 | ordinal}}</li>
+                 <li>{{example4 | ordinal}}</li>
+                 <li>{{example5 | ordinal}}</li>
+                 <li>{{example6 | ordinal}}</li>
+                 <li>{{example7 | ordinal}}</li>
+                 <li>{{example8 | ordinal}}</li>
+               </ul>
+            </div>
+            
+        <div data-ng-controller="StaticLanguageController">
+               <h4 >AngularJS Filter - Static Languages</h4>
+               <p><strong>Original:</strong></p>
+               <ul>
+                 <li data-ng-repeat="lang in example1">{{lang.name}}</li>
+               </ul>
+               <p><strong>Static Language Filter:</strong></p>
+               <ul>
+                 <li data-ng-repeat="lang in example1 | staticLanguage">{{lang.name}}</li>
+               </ul>
+            </div>
+</body>
+</html>

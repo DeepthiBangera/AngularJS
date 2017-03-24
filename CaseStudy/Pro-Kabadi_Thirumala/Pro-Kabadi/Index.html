@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1" />
+    <title>Pro-Kabadi Angular Application</title>
+
+    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/myApp.js"></script>
+    <script type="text/javascript" src="js/teamController.js"></script>
+    <script type="text/javascript" src="js/teamService.js"></script>
+    <script type="text/javascript" src="js/playerController.js"></script>
+    
+</head>
+<body ng-app="myApp">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#team">Pro Kabadi</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#team">Home</a></li>
+                <li><a href="#customdirective">Custom Directive</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="" ui-sref="team">Teams<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#players/1">Bengal Warriors</a>
+                        </li>
+                        <li>
+                            <a href="#players/2">Benguluru Bulls</a>
+                        </li>
+                        <li>
+                            <a href="#players/3">Patna Pirates</a>
+                        </li>
+                        <li>
+                            <a href="#players/4">Telugu Titans</a>
+                        </li>
+                        <li>
+                            <a href="#players/5">U Mumba</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div ng-view>
+        </div>
+    </div>
+</body>
+</html>

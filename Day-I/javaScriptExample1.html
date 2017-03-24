@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function getEmployeeDetails(){
+	var empNumber=document.form.empNumber.value;
+	var empName=document.form.empName.value;
+	var empJob=document.form.empJob.value;
+	var empSalary=document.form.empSalary.value;
+	var empDeptNo=document.form.empDeptNo.value;
+	
+	document.getElementById("empDetails").innerHTML="<html><body bgcolor='lightgreen'>"+ "Employee Details We Are Looking For <hr> <br> "+
+													 "Employee Number:"+empNumber+"<br>" +
+													 "Employee Name:"+empName+"<br>" +
+													 "Employee Job:"+empJob+"<br>" +
+													 "Employee Salary:"+empSalary+"<br>" +
+													 "Employee Department Number:"+empDeptNo+"<br>" +"</body></html>";
+	return false;
+}
+</script>
+</head>
+<body>
+<form name="form" method="get" action="./test.jsp" onsubmit="return getEmployeeDetails()">
+<table border="1" align="center">
+<tr><td> Employee Number</td>
+	<td> <input  type="number" name="empNumber" required="required"/></td>
+</tr>
+<tr><td> Employee Name</td>
+	<td> <input  type="text" name="empName" required="required"/></td>
+</tr>	
+<tr><td> Employee Job</td>
+	<td> <input  type="text" name="empJob" required="required"/></td>
+</tr>	
+<tr><td> Employee Salary</td>
+	<td> <input  type="number" name="empSalary" required="required"/></td>
+</tr>	
+<tr><td> Employee Department Number</td>
+	<td> <input  type="number" name="empDeptNo" required="required"/></td>
+</tr>
+<tr><td> <input type="submit" value="Submit" /></td>
+	<td> <input type="reset" value="Reset" /></td>
+</tr>	
+</table>
+</form>
+
+<section>	<div id="empDetails">
+			</div>
+</section>
+</body>
+</html>

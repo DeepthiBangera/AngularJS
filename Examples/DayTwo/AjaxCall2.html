@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+<head>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+ </script> 
+</head>
+<body ng-controller = "myController">
+  <table border=1>
+  <tr ng-repeat ="data in myData">
+    <td>{data.Name}</td>
+	
+  </tr>
+  </table>
+  <script>
+ var myApp = angular.module('myApp',[])
+ myApp.controller('myController',function($scope,$http){
+    $http.get('data.txt').success(function(response){
+	  $scope.myData=response;
+	});
+ });
+ </script>
+</body>
+</html>

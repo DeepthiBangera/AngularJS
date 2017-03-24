@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app="">
+<form name="form">
+<table border="1" align="center">
+<tr><td> Employee Number</td>
+	<td> <input  type="number" name="empNumber" ng-model="empNumber" required="required"/></td>
+</tr>
+<tr><td> Employee Name</td>
+	<td> <input  type="text" name="empName" ng-model="empName" required="required"/></td>
+</tr>	
+<tr><td> Employee Job</td>
+	<td> <input  type="text" name="empJob" ng-model="empJob" required="required"/></td>
+</tr>	
+<tr><td> Employee Salary</td>
+	<td> <input  type="number" name="empSalary" ng-model="empSalary" required="required"/></td>
+</tr>	
+<tr><td> Employee Department Number</td>
+	<td> <input  type="number" name="empDeptNo" ng-model="empDeptNo" required="required"/></td>
+</tr>
+</table>
+</form>
+<section>
+<h3>Using ng-bind</h3>
+	<div>
+			Employee Number: 	<span ng-bind="empNumber">	</span>   	<br>
+			Employee Name: 		<span ng-bind="empName">	</span>  	<br>
+			Employee Job: 		<span ng-bind="empJob">		</span>  	<br>
+			Employee Salary: 	<span ng-bind="empSalary">	</span>  	<br>
+			Employee Department Number: <span ng-bind="empDeptNo"></span>  
+			</div>
+</section>
+
+<section>	
+<h3>Using Expressions </h3>
+<div>
+			Employee Number: 	{{empNumber}}	  		<br>
+			Employee Name: 		{{empName}}	 			<br>
+			Employee Job: 		{{empJob}}	 			<br>
+			Employee Salary: 	{{empSalary +500}} 		<br>
+			Employee Department Number: {{empDeptNo}}
+			</div>
+</section>
+
+</body>
+</html>

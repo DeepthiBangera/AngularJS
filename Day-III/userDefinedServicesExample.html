@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script type="text/javascript" src="JS/contactService.js" ></script>
+
+</head>
+<div data-ng-app="module"  data-ng-controller="ContactController">
+    <form>
+<table>
+<tr><td><label>Name</label></td><td>
+        <input type="text" name="name" data-ng-model="newcontact.name "/></td></tr>
+<tr><td>    <label>Email</label></td><td> 
+        <input type="text" name="email" data-ng-model="newcontact.email"/></td></tr>
+<tr><td>    <label>Phone</label></td><td> 
+        <input type="text" name="phone" data-ng-model="newcontact.phone"/></td></tr>
+        
+ <tr><td> <input type="hidden" data-ng-model="newcontact.id" /></td><td>
+     <input type="button" value="Save" data-ng-click="saveContact()" /></td></tr>
+</table>
+    </form>
+
+<table>
+<thead> 
+<tr>
+	<th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr data-ng-repeat="contact in contacts">
+	<td>{{ contact.id }} </td>
+    <td>{{ contact.name }}</td>
+    <td>{{ contact.email }}</td>
+    <td>{{ contact.phone }}</td>
+    <td>
+        <a  href="#" data-ng-click="edit(contact.id)">edit</a> | 
+        <a href="#" data-ng-click="delete(contact.id)">delete</a>
+    </td>
+ </tr>
+</tbody>
+</table>    
+</div>

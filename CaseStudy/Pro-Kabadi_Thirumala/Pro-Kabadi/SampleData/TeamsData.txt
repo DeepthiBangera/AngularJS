@@ -1,0 +1,24 @@
+[
+		{
+		"teamId" : 1,
+		"teamName":"Bengal Warriors",
+		"teamLogo":"bengalTiger.png"
+	},  
+	{
+		"teamId" : 2,
+		"teamName":"Benguluru Bulls",
+		"teamLogo":"benguluruBull.png"
+	},    {
+		"teamId" : 3,
+		"teamName":"Patna Pirates",
+		"teamLogo":"patnaPirates.png"
+	},    {
+		"teamId" : 4,
+		"teamName":"Telugu Titans",
+		"teamLogo":"TeluguTitans.png"
+	},  {
+		"teamId" : 5,
+		"teamName":"U Mumba",
+		"teamLogo":"mumba.png"
+	} 
+]
